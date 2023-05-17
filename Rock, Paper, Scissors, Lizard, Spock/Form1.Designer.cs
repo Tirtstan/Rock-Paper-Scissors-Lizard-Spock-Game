@@ -1,6 +1,6 @@
 ﻿namespace Rock__Paper__Scissors__Lizard__Spock
 {
-    partial class Form1
+    partial class formMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -39,7 +39,7 @@
             btnLizard = new Button();
             btnSpock = new Button();
             btnExit = new Button();
-            btnPlay = new Button();
+            btnPlayAgain = new Button();
             lblPlayerChoice = new Label();
             lblComputerChoice = new Label();
             lblGame1 = new Label();
@@ -101,7 +101,7 @@
             // 
             // btnRock
             // 
-            btnRock.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRock.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnRock.Location = new Point(86, 104);
             btnRock.Margin = new Padding(3, 2, 3, 2);
             btnRock.Name = "btnRock";
@@ -109,10 +109,11 @@
             btnRock.TabIndex = 6;
             btnRock.Text = "ROCK";
             btnRock.UseVisualStyleBackColor = true;
+            btnRock.Click += btnRock_Click;
             // 
             // btnPaper
             // 
-            btnPaper.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPaper.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnPaper.Location = new Point(196, 104);
             btnPaper.Margin = new Padding(3, 2, 3, 2);
             btnPaper.Name = "btnPaper";
@@ -120,10 +121,11 @@
             btnPaper.TabIndex = 7;
             btnPaper.Text = "PAPER";
             btnPaper.UseVisualStyleBackColor = true;
+            btnPaper.Click += btnPaper_Click;
             // 
             // btnScissors
             // 
-            btnScissors.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnScissors.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnScissors.Location = new Point(306, 104);
             btnScissors.Margin = new Padding(3, 2, 3, 2);
             btnScissors.Name = "btnScissors";
@@ -131,10 +133,11 @@
             btnScissors.TabIndex = 8;
             btnScissors.Text = "SCISSORS";
             btnScissors.UseVisualStyleBackColor = true;
+            btnScissors.Click += btnScissors_Click;
             // 
             // btnLizard
             // 
-            btnLizard.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLizard.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnLizard.Location = new Point(416, 104);
             btnLizard.Margin = new Padding(3, 2, 3, 2);
             btnLizard.Name = "btnLizard";
@@ -142,10 +145,11 @@
             btnLizard.TabIndex = 9;
             btnLizard.Text = "LIZARD";
             btnLizard.UseVisualStyleBackColor = true;
+            btnLizard.Click += btnLizard_Click;
             // 
             // btnSpock
             // 
-            btnSpock.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSpock.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnSpock.Location = new Point(527, 104);
             btnSpock.Margin = new Padding(3, 2, 3, 2);
             btnSpock.Name = "btnSpock";
@@ -153,6 +157,7 @@
             btnSpock.TabIndex = 10;
             btnSpock.Text = "SPOCK";
             btnSpock.UseVisualStyleBackColor = true;
+            btnSpock.Click += btnSpock_Click;
             // 
             // btnExit
             // 
@@ -166,17 +171,17 @@
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
             // 
-            // btnPlay
+            // btnPlayAgain
             // 
-            btnPlay.Font = new Font("Roboto", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            btnPlay.Location = new Point(388, 272);
-            btnPlay.Margin = new Padding(3, 2, 3, 2);
-            btnPlay.Name = "btnPlay";
-            btnPlay.Size = new Size(190, 45);
-            btnPlay.TabIndex = 13;
-            btnPlay.Text = "PLAY AGAIN";
-            btnPlay.UseVisualStyleBackColor = true;
-            btnPlay.Click += btnPlay_Click;
+            btnPlayAgain.Font = new Font("Roboto", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPlayAgain.Location = new Point(388, 272);
+            btnPlayAgain.Margin = new Padding(3, 2, 3, 2);
+            btnPlayAgain.Name = "btnPlayAgain";
+            btnPlayAgain.Size = new Size(190, 45);
+            btnPlayAgain.TabIndex = 13;
+            btnPlayAgain.Text = "PLAY AGAIN";
+            btnPlayAgain.UseVisualStyleBackColor = true;
+            btnPlayAgain.Click += btnPlayAgain_Click;
             // 
             // lblPlayerChoice
             // 
@@ -248,7 +253,7 @@
             lblWinner.TabIndex = 20;
             lblWinner.Text = "OVERALL WINNER:";
             // 
-            // Form1
+            // formMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -260,7 +265,7 @@
             Controls.Add(lblGame1);
             Controls.Add(lblComputerChoice);
             Controls.Add(lblPlayerChoice);
-            Controls.Add(btnPlay);
+            Controls.Add(btnPlayAgain);
             Controls.Add(btnExit);
             Controls.Add(btnSpock);
             Controls.Add(btnLizard);
@@ -273,8 +278,8 @@
             Controls.Add(picLizard);
             Controls.Add(picScissors);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "formMain";
+            Text = "Rock, Paper, Scissors, Lizard, Spock Game";
             ((System.ComponentModel.ISupportInitialize)picScissors).EndInit();
             ((System.ComponentModel.ISupportInitialize)picLizard).EndInit();
             ((System.ComponentModel.ISupportInitialize)picPaper).EndInit();
@@ -297,7 +302,7 @@
         private Button btnLizard;
         private Button btnSpock;
         private Button btnExit;
-        private Button btnPlay;
+        private Button btnPlayAgain;
         private Label lblPlayerChoice;
         private Label lblComputerChoice;
         private Label lblGame1;
