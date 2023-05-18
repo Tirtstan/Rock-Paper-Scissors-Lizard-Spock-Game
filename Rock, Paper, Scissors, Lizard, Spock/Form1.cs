@@ -5,8 +5,8 @@ namespace Rock__Paper__Scissors__Lizard__Spock
         private string[] choices = new string[5] { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
 
         // layed out like a table :)
-        // double check I did got the outcome right
-        private string[,] gameRuleSet = new string[5, 5]
+        // double check I got the outcome right
+        private string[,] outcomeArray = new string[5, 5]
         {
             { "TIE", "Paper", "Rock", "Rock", "Spock" },
             { "Paper", "TIE", "Scissors", "Lizard", "Paper" },
@@ -37,11 +37,10 @@ namespace Rock__Paper__Scissors__Lizard__Spock
 
         private string GetOutcome(int playerChoice, int computerChoice)
         {
-            // use gameRuleSet array and this method's parameters to get the outcome in string
+            // use outcomeArray array and this method's parameters to get the outcome in string
             // (return "") is just placeholder so it doesn't error
-            // return the string (from the gameRuleSet array)
-            // good luck, I don't know what else to give you so you get the hard part I guess :)
-            // feel free to just let me do it if you can't figure it out and I'll explain it on Monday or any other time
+            // return the string (from the outcomeArray array)
+            // feel free to let me do it if you can't figure it out and I'll explain it on Monday or any other time
             // use this to see examples and learn: (https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/multidimensional-arrays) ignore 3D arrays obviously, that is too much
 
             return "";
