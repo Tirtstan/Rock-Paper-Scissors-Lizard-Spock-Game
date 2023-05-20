@@ -14,6 +14,9 @@ namespace Rock__Paper__Scissors__Lizard__Spock
             { "Rock", "Lizard", "Scissors", "TIE", "Lizard" },
             { "Spock", "Paper", "Spock", "Lizard", "TIE" },
         };
+        private int gameRound = 0;
+        private int playerScore = 0;
+        private int computerScore = 0;
 
         public formMain()
         {
@@ -37,13 +40,21 @@ namespace Rock__Paper__Scissors__Lizard__Spock
 
         private string GetOutcome(int playerChoice, int computerChoice)
         {
-            // use outcomeArray array and this method's parameters to get the outcome in string
-            // (return "") is just placeholder so it doesn't error
-            // return the string (from the outcomeArray array)
-            // feel free to let me do it if you can't figure it out and I'll explain it on Monday or any other time
-            // use this to see examples and learn: (https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/multidimensional-arrays) ignore 3D arrays obviously, that is too much
+            string outcome = outcomeArray[playerChoice, computerChoice];
 
-            return "";
+            // won't increment round if tie or add points
+            if (outcome == choices[playerChoice])
+            {
+                playerScore++;
+                gameRound++;
+            }
+            else if (outcome == choices[computerChoice])
+            {
+                computerScore++;
+                gameRound++;
+            }
+
+            return outcome;
         }
 
         private void btnRock_Click(object sender, EventArgs e)

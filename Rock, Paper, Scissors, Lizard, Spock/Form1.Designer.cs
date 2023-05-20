@@ -279,6 +279,7 @@
             Controls.Add(picScissors);
             Margin = new Padding(3, 2, 3, 2);
             Name = "formMain";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Rock, Paper, Scissors, Lizard, Spock Game";
             ((System.ComponentModel.ISupportInitialize)picScissors).EndInit();
             ((System.ComponentModel.ISupportInitialize)picLizard).EndInit();
