@@ -180,31 +180,11 @@ namespace Rock__Paper__Scissors__Lizard__Spock
 
         private string GetOutcome(int playerChoice, int computerChoice)
         {
-            string playerSelected = choices[playerChoice];
-            string computerSelected = choices[computerChoice];
-
-            string outcome = outcomeArray[playerChoice, computerChoice];
-
-            // won't increment round if tie or add points
-            if (outcome == choices[playerChoice])
-            {
-                playerScore++;
-                gameRound++;
-
-                gameWinner = "Player";
-            }
-            else if (outcome == choices[computerChoice])
-            {
-                computerScore++;
-                gameRound++;
-
-                gameWinner = "Computer";
-            }
-
-            string ruling = GetRuling(playerSelected, computerSelected);
-
-            lblRuling.Text = ruling;
-            lblRuling.Visible = true;
+            // use outcomeArray array and this method's parameters to get the outcome in string
+            // (return "") is just placeholder so it doesn't error
+            // return the string (from the outcomeArray array)
+            // feel free to let me do it if you can't figure it out and I'll explain it on Monday or any other time
+            // use this to see examples and learn: (https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/multidimensional-arrays) ignore 3D arrays obviously, that is too much
 
             return outcome;
         }
