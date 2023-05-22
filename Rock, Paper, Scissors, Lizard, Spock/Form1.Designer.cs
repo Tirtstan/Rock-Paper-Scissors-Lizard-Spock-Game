@@ -47,6 +47,7 @@
             lblGame3 = new Label();
             lblWinner = new Label();
             lblRuling = new Label();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)picScissors).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picLizard).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picPaper).BeginInit();
@@ -57,9 +58,10 @@
             // picScissors
             // 
             picScissors.Image = Properties.Resources.CamScanner_05_17_2023_11_13_3;
-            picScissors.Location = new Point(350, 12);
+            picScissors.Location = new Point(306, 9);
+            picScissors.Margin = new Padding(3, 2, 3, 2);
             picScissors.Name = "picScissors";
-            picScissors.Size = new Size(120, 120);
+            picScissors.Size = new Size(105, 90);
             picScissors.SizeMode = PictureBoxSizeMode.StretchImage;
             picScissors.TabIndex = 0;
             picScissors.TabStop = false;
@@ -68,9 +70,10 @@
             // 
             picLizard.Cursor = Cursors.No;
             picLizard.Image = Properties.Resources.CamScanner_05_17_2023_11_13_4;
-            picLizard.Location = new Point(475, 12);
+            picLizard.Location = new Point(416, 9);
+            picLizard.Margin = new Padding(3, 2, 3, 2);
             picLizard.Name = "picLizard";
-            picLizard.Size = new Size(120, 120);
+            picLizard.Size = new Size(105, 90);
             picLizard.SizeMode = PictureBoxSizeMode.StretchImage;
             picLizard.TabIndex = 1;
             picLizard.TabStop = false;
@@ -78,9 +81,10 @@
             // picPaper
             // 
             picPaper.Image = Properties.Resources.CamScanner_05_17_2023_11_13_2;
-            picPaper.Location = new Point(224, 12);
+            picPaper.Location = new Point(196, 9);
+            picPaper.Margin = new Padding(3, 2, 3, 2);
             picPaper.Name = "picPaper";
-            picPaper.Size = new Size(120, 120);
+            picPaper.Size = new Size(105, 90);
             picPaper.SizeMode = PictureBoxSizeMode.StretchImage;
             picPaper.TabIndex = 2;
             picPaper.TabStop = false;
@@ -88,9 +92,10 @@
             // picRock
             // 
             picRock.Image = Properties.Resources.CamScanner_05_17_2023_11_13_1;
-            picRock.Location = new Point(98, 12);
+            picRock.Location = new Point(86, 9);
+            picRock.Margin = new Padding(3, 2, 3, 2);
             picRock.Name = "picRock";
-            picRock.Size = new Size(120, 120);
+            picRock.Size = new Size(105, 90);
             picRock.SizeMode = PictureBoxSizeMode.StretchImage;
             picRock.TabIndex = 3;
             picRock.TabStop = false;
@@ -98,9 +103,10 @@
             // picSpock
             // 
             picSpock.Image = Properties.Resources.CamScanner_05_17_2023_11_13_5;
-            picSpock.Location = new Point(602, 12);
+            picSpock.Location = new Point(527, 9);
+            picSpock.Margin = new Padding(3, 2, 3, 2);
             picSpock.Name = "picSpock";
-            picSpock.Size = new Size(120, 120);
+            picSpock.Size = new Size(105, 90);
             picSpock.SizeMode = PictureBoxSizeMode.StretchImage;
             picSpock.TabIndex = 4;
             picSpock.TabStop = false;
@@ -108,9 +114,10 @@
             // btnRock
             // 
             btnRock.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnRock.Location = new Point(98, 139);
+            btnRock.Location = new Point(86, 104);
+            btnRock.Margin = new Padding(3, 2, 3, 2);
             btnRock.Name = "btnRock";
-            btnRock.Size = new Size(120, 40);
+            btnRock.Size = new Size(105, 30);
             btnRock.TabIndex = 6;
             btnRock.Text = "ROCK";
             btnRock.UseVisualStyleBackColor = true;
@@ -119,9 +126,10 @@
             // btnPaper
             // 
             btnPaper.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnPaper.Location = new Point(224, 139);
+            btnPaper.Location = new Point(196, 104);
+            btnPaper.Margin = new Padding(3, 2, 3, 2);
             btnPaper.Name = "btnPaper";
-            btnPaper.Size = new Size(120, 40);
+            btnPaper.Size = new Size(105, 30);
             btnPaper.TabIndex = 7;
             btnPaper.Text = "PAPER";
             btnPaper.UseVisualStyleBackColor = true;
@@ -130,9 +138,10 @@
             // btnScissors
             // 
             btnScissors.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnScissors.Location = new Point(350, 139);
+            btnScissors.Location = new Point(306, 104);
+            btnScissors.Margin = new Padding(3, 2, 3, 2);
             btnScissors.Name = "btnScissors";
-            btnScissors.Size = new Size(120, 40);
+            btnScissors.Size = new Size(105, 30);
             btnScissors.TabIndex = 8;
             btnScissors.Text = "SCISSORS";
             btnScissors.UseVisualStyleBackColor = true;
@@ -141,9 +150,10 @@
             // btnLizard
             // 
             btnLizard.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLizard.Location = new Point(475, 139);
+            btnLizard.Location = new Point(416, 104);
+            btnLizard.Margin = new Padding(3, 2, 3, 2);
             btnLizard.Name = "btnLizard";
-            btnLizard.Size = new Size(120, 40);
+            btnLizard.Size = new Size(105, 30);
             btnLizard.TabIndex = 9;
             btnLizard.Text = "LIZARD";
             btnLizard.UseVisualStyleBackColor = true;
@@ -152,9 +162,10 @@
             // btnSpock
             // 
             btnSpock.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSpock.Location = new Point(602, 139);
+            btnSpock.Location = new Point(527, 104);
+            btnSpock.Margin = new Padding(3, 2, 3, 2);
             btnSpock.Name = "btnSpock";
-            btnSpock.Size = new Size(120, 40);
+            btnSpock.Size = new Size(105, 30);
             btnSpock.TabIndex = 10;
             btnSpock.Text = "SPOCK";
             btnSpock.UseVisualStyleBackColor = true;
@@ -163,9 +174,10 @@
             // btnExit
             // 
             btnExit.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            btnExit.Location = new Point(666, 363);
+            btnExit.Location = new Point(583, 272);
+            btnExit.Margin = new Padding(3, 2, 3, 2);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(121, 60);
+            btnExit.Size = new Size(106, 45);
             btnExit.TabIndex = 12;
             btnExit.Text = "EXIT";
             btnExit.UseVisualStyleBackColor = true;
@@ -174,9 +186,10 @@
             // btnPlayAgain
             // 
             btnPlayAgain.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            btnPlayAgain.Location = new Point(443, 363);
+            btnPlayAgain.Location = new Point(388, 272);
+            btnPlayAgain.Margin = new Padding(3, 2, 3, 2);
             btnPlayAgain.Name = "btnPlayAgain";
-            btnPlayAgain.Size = new Size(217, 60);
+            btnPlayAgain.Size = new Size(190, 45);
             btnPlayAgain.TabIndex = 13;
             btnPlayAgain.Text = "PLAY AGAIN";
             btnPlayAgain.UseVisualStyleBackColor = true;
@@ -186,9 +199,9 @@
             // 
             lblPlayerChoice.AutoSize = true;
             lblPlayerChoice.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPlayerChoice.Location = new Point(406, 205);
+            lblPlayerChoice.Location = new Point(355, 154);
             lblPlayerChoice.Name = "lblPlayerChoice";
-            lblPlayerChoice.Size = new Size(245, 29);
+            lblPlayerChoice.Size = new Size(192, 24);
             lblPlayerChoice.TabIndex = 14;
             lblPlayerChoice.Text = "PLAYER SELECTED:";
             // 
@@ -196,9 +209,9 @@
             // 
             lblComputerChoice.AutoSize = true;
             lblComputerChoice.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblComputerChoice.Location = new Point(406, 241);
+            lblComputerChoice.Location = new Point(355, 181);
             lblComputerChoice.Name = "lblComputerChoice";
-            lblComputerChoice.Size = new Size(290, 29);
+            lblComputerChoice.Size = new Size(226, 24);
             lblComputerChoice.TabIndex = 15;
             lblComputerChoice.Text = "COMPUTER SELECTED:";
             // 
@@ -206,9 +219,9 @@
             // 
             lblGame1.AutoSize = true;
             lblGame1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblGame1.Location = new Point(11, 207);
+            lblGame1.Location = new Point(10, 155);
             lblGame1.Name = "lblGame1";
-            lblGame1.Size = new Size(207, 29);
+            lblGame1.Size = new Size(164, 24);
             lblGame1.TabIndex = 16;
             lblGame1.Text = "Winner of game 1:";
             // 
@@ -216,9 +229,9 @@
             // 
             lblGame2.AutoSize = true;
             lblGame2.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblGame2.Location = new Point(11, 240);
+            lblGame2.Location = new Point(10, 180);
             lblGame2.Name = "lblGame2";
-            lblGame2.Size = new Size(207, 29);
+            lblGame2.Size = new Size(164, 24);
             lblGame2.TabIndex = 17;
             lblGame2.Text = "Winner of game 2:";
             // 
@@ -226,9 +239,9 @@
             // 
             lblGame3.AutoSize = true;
             lblGame3.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblGame3.Location = new Point(11, 273);
+            lblGame3.Location = new Point(10, 205);
             lblGame3.Name = "lblGame3";
-            lblGame3.Size = new Size(207, 29);
+            lblGame3.Size = new Size(164, 24);
             lblGame3.TabIndex = 19;
             lblGame3.Text = "Winner of game 3:";
             // 
@@ -236,9 +249,9 @@
             // 
             lblWinner.AutoSize = true;
             lblWinner.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Underline, GraphicsUnit.Point);
-            lblWinner.Location = new Point(11, 382);
+            lblWinner.Location = new Point(10, 286);
             lblWinner.Name = "lblWinner";
-            lblWinner.Size = new Size(230, 29);
+            lblWinner.Size = new Size(183, 24);
             lblWinner.TabIndex = 20;
             lblWinner.Text = "OVERALL WINNER:";
             // 
@@ -246,17 +259,27 @@
             // 
             lblRuling.AutoSize = true;
             lblRuling.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblRuling.Location = new Point(406, 307);
+            lblRuling.Location = new Point(355, 230);
             lblRuling.Name = "lblRuling";
-            lblRuling.Size = new Size(90, 25);
+            lblRuling.Size = new Size(77, 20);
             lblRuling.TabIndex = 21;
             lblRuling.Text = "RULING";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(263, 293);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 22;
+            label1.Text = "label1";
+            // 
             // formMain
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 451);
+            ClientSize = new Size(700, 338);
+            Controls.Add(label1);
             Controls.Add(lblRuling);
             Controls.Add(lblWinner);
             Controls.Add(lblGame3);
@@ -276,6 +299,7 @@
             Controls.Add(picPaper);
             Controls.Add(picLizard);
             Controls.Add(picScissors);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "formMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Rock, Paper, Scissors, Lizard, Spock Game";
@@ -310,5 +334,6 @@
         private Label lblGame3;
         private Label lblWinner;
         private Label lblRuling;
+        private Label label1;
     }
 }

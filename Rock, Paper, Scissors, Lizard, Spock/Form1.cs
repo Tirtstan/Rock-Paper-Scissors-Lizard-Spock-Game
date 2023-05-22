@@ -3,7 +3,6 @@ namespace Rock__Paper__Scissors__Lizard__Spock
     public partial class formMain : Form
     {
         private string[] choices = new string[5] { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
-        string gameWinner;
 
         // layed out like a table :)
         // double check I got the outcome right
@@ -15,7 +14,7 @@ namespace Rock__Paper__Scissors__Lizard__Spock
             { "Rock", "Lizard", "Scissors", "TIE", "Lizard" },
             { "Spock", "Paper", "Spock", "Lizard", "TIE" },
         };
-        private int gameRound = 0;
+        private int gameRound = 1;
         private int playerScore = 0;
         private int computerScore = 0;
 
@@ -34,37 +33,41 @@ namespace Rock__Paper__Scissors__Lizard__Spock
             Random random = new();
             int computerChoice = random.Next(0, 5);     // returns (0 - 4)
 
-            string outcome = GetOutcome(playerChoice, computerChoice);
-
-            if (outcome == "TIE")
-            {
-                gameWinner = "";
-            }
+            string gameWinner = GetWinner(playerChoice, computerChoice);
+            string outcome = outcomeArray[playerChoice, computerChoice];
 
             lblPlayerChoice.Text = "PLAYER SELECTED: " + choices[playerChoice];
             lblComputerChoice.Text = "COMPUTER SELECTED: " + choices[computerChoice];
-
-            if (outcome == "TIE")
-                return;
 
             switch (gameRound)      // adds outcome to relevant label and reveals them
             {
                 default:
                 case 1:
                     lblGame1.Visible = true;
-                    lblGame1.Text += gameWinner;
+                    lblGame1.Text = "Winner of game 1: " + gameWinner;
                     break;
                 case 2:
                     lblGame2.Visible = true;
-                    lblGame2.Text += gameWinner;
+                    lblGame2.Text = "Winner of game 2: " + gameWinner;
                     break;
                 case 3:
                     lblGame3.Visible = true;
-                    lblGame3.Text += gameWinner;
+                    lblGame3.Text = "Winner of game 3: " + gameWinner;
                     break;
             }
 
-            if (gameRound >= 3 || playerScore == 2 || computerScore == 2)
+            if (outcome == choices[playerChoice])
+            {
+                gameRound++;
+                playerScore++;
+            }
+            else if (outcome == choices[computerChoice])
+            {
+                gameRound++;
+                computerScore++;
+            }
+
+            if (gameRound >= 4)
             {
                 string overallWinner = GetOverallWinner(playerScore, computerScore);
 
@@ -96,7 +99,7 @@ namespace Rock__Paper__Scissors__Lizard__Spock
 
         private void EndGame()  // resets the game counter, player and computer score, and disables game buttons (to prevent errors)
         {
-            gameRound = 0;
+            gameRound = 1;
             playerScore = 0;
             computerScore = 0;
 
@@ -179,27 +182,24 @@ namespace Rock__Paper__Scissors__Lizard__Spock
             return ruling;
         }
 
-        private string GetOutcome(int playerChoice, int computerChoice)
+        private string GetWinner(int playerChoice, int computerChoice)
         {
+            string gameWinner = "";
             string playerSelected = choices[playerChoice];
             string computerSelected = choices[computerChoice];
-
             string outcome = outcomeArray[playerChoice, computerChoice];
 
-            
             if (outcome == choices[playerChoice])   // won't increment round if tie or add points
             {
-                playerScore++;
-                gameRound++;
-
                 gameWinner = "Player";      // displays the player as the winner of game 1, 2 or 3
             }
             else if (outcome == choices[computerChoice])
             {
-                computerScore++;
-                gameRound++;
-
                 gameWinner = "Computer";      // displays the computer as the winner of game 1, 2 or 3
+            }
+            else
+            {
+                gameWinner = "TIE";
             }
 
             string ruling = GetRuling(playerSelected, computerSelected);
@@ -207,7 +207,9 @@ namespace Rock__Paper__Scissors__Lizard__Spock
             lblRuling.Text = ruling;
             lblRuling.Visible = true;
 
-            return outcome;
+            label1.Text = "Game Round: " + gameRound;
+
+            return gameWinner;
         }
 
         private void btnRock_Click(object sender, EventArgs e)
@@ -262,7 +264,7 @@ namespace Rock__Paper__Scissors__Lizard__Spock
             btnLizard.Enabled = true;
             btnSpock.Enabled = true;
 
-            gameRound = 0;
+            gameRound = 1;
             playerScore = 0;
             computerScore = 0;
         }
