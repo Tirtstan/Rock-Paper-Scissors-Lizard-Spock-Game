@@ -32,7 +32,7 @@ namespace Rock__Paper__Scissors__Lizard__Spock
         private void StartGame(int playerChoice)
         {
             Random random = new();
-            int computerChoice = random.Next(0, 5); // returns (0 - 4)
+            int computerChoice = random.Next(0, 5);     // returns (0 - 4)
 
             string outcome = GetOutcome(playerChoice, computerChoice);
 
@@ -47,7 +47,7 @@ namespace Rock__Paper__Scissors__Lizard__Spock
             if (outcome == "TIE")
                 return;
 
-            switch (gameRound) // adds outcome to relevant label and reveals them
+            switch (gameRound)      // adds outcome to relevant label and reveals them
             {
                 default:
                 case 1:
@@ -74,7 +74,7 @@ namespace Rock__Paper__Scissors__Lizard__Spock
             }
         }
 
-        private string GetOverallWinner(int scorePlayer, int scoreComputer)
+        private string GetOverallWinner(int scorePlayer, int scoreComputer)     // method to show the overall winner
         {
             string overallWinner;
 
@@ -94,7 +94,7 @@ namespace Rock__Paper__Scissors__Lizard__Spock
             return overallWinner;
         }
 
-        private void EndGame() // resets the game counter, player and computer score, and disables game buttons (to prevent errors)
+        private void EndGame()  // resets the game counter, player and computer score, and disables game buttons (to prevent errors)
         {
             gameRound = 0;
             playerScore = 0;
@@ -112,7 +112,7 @@ namespace Rock__Paper__Scissors__Lizard__Spock
         {
             string ruling = "";
 
-            if (playerSelected == "Rock")
+            if (playerSelected == "Rock")   // ruling for when player chooses rock
             {
                 if (computerSelected == "Scissors" || computerSelected == "Lizard")
                     ruling = "Rock crushes " + computerSelected;
@@ -123,7 +123,7 @@ namespace Rock__Paper__Scissors__Lizard__Spock
                 else
                     ruling = "TIE";
             }
-            else if (playerSelected == "Paper")
+            else if (playerSelected == "Paper")   // ruling for when player chooses paper
             {
                 if (computerSelected == "Rock")
                     ruling = "Paper covers Rock";
@@ -136,7 +136,7 @@ namespace Rock__Paper__Scissors__Lizard__Spock
                 else
                     ruling = "TIE";
             }
-            else if (playerSelected == "Scissors")
+            else if (playerSelected == "Scissors")   // ruling for when player chooses scissors
             {
                 if (computerSelected == "Paper")
                     ruling = "Scissors cuts Paper";
@@ -149,7 +149,7 @@ namespace Rock__Paper__Scissors__Lizard__Spock
                 else
                     ruling = "TIE";
             }
-            else if (playerSelected == "Lizard")
+            else if (playerSelected == "Lizard")   // ruling for when player chooses lizard
             {
                 if (computerSelected == "Paper")
                     ruling = "Lizard eats Paper";
@@ -162,7 +162,7 @@ namespace Rock__Paper__Scissors__Lizard__Spock
                 else
                     ruling = "TIE";
             }
-            else if (playerSelected == "Spock")
+            else if (playerSelected == "Spock")   // ruling for when player chooses spock
             {
                 if (computerSelected == "Rock")
                     ruling = "Spock vaporizes Rock";
@@ -186,20 +186,20 @@ namespace Rock__Paper__Scissors__Lizard__Spock
 
             string outcome = outcomeArray[playerChoice, computerChoice];
 
-            // won't increment round if tie or add points
-            if (outcome == choices[playerChoice])
+            
+            if (outcome == choices[playerChoice])   // won't increment round if tie or add points
             {
                 playerScore++;
                 gameRound++;
 
-                gameWinner = "Player";
+                gameWinner = "Player";      // displays the player as the winner of game 1, 2 or 3
             }
             else if (outcome == choices[computerChoice])
             {
                 computerScore++;
                 gameRound++;
 
-                gameWinner = "Computer";
+                gameWinner = "Computer";      // displays the computer as the winner of game 1, 2 or 3
             }
 
             string ruling = GetRuling(playerSelected, computerSelected);
@@ -240,7 +240,7 @@ namespace Rock__Paper__Scissors__Lizard__Spock
             ResetGame();
         }
 
-        private void ResetGame()
+        private void ResetGame()    // method that resets the game
         {
             lblGame1.Text = "Winner of game 1: ";
             lblGame1.Visible = false;
@@ -269,7 +269,7 @@ namespace Rock__Paper__Scissors__Lizard__Spock
 
         private void formMain_Activated(object sender, EventArgs e)
         {
-            ResetGame();
+            ResetGame();    // pulls the method to reset the game so that the unknown information is hidden
         }
     }
 }
